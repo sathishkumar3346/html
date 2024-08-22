@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #page{
+            align-items: center;
+            float: left;
+        }
+        #box{
+            border: 2px solid black;
+            width: 100%;
+            height: 300px;
+            margin-left: 200px;
+        }
+        /* #button{
+            border: 2px solid black;
+            float: left;
+        } */
+    </style>
+</head>
+<body>
+    <div id="page">
+        <button id="button" onclick="previse()">previse</button>
+        <div id="box">
+
+        </div>
+        <button onclick="next()">Next</button>
+    </div>
+    <script>
+        let a =document.getElementById("box")
+        const arr=["red","green","blue","black","orange"]
+        let color=0;
+        a.style.backgroundColor =arr[color]
+        function next(){
+           
+                if(color==4){
+                    color=0
+                }else{
+                    color++;
+                }
+                a.style.backgroundColor =arr[color]
+                console.log(color)
+        }
+        function previse(){
+            
+            if(color==0){
+                color=4
+            }else{
+                color--
+            }    
+            a.style.backgroundColor =arr[color]
+            console.log(color)
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <style>
+          table, th, td {
+            border: 1px solid black;
+            border-collapse: collapse;
+        }
+        h1{
+            text-align: center;
+            color: #6b1212;
+        }
+        form{
+            border-radius: 20px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Product Billing</h1>
+    <form id="form"   class="container bg-info p-3">
+
+        <label class="form-label">Product</label>
+        <input id="pro" type="text" value="" class="form-control"/>
+         <br/>
+         <br/>
+
+        <label class="form-label">Quentity</label>
+        <input id="quen" type="text" value="" class="form-control"/>
+        <br/>
+        <br/>
+
+        <label class="form-label">Price</label>
+        <input id="pri" type="text" value="" class="form-control"/>
+        <br/>
+        <br/>
+
+        <button type="submit" class="btn btn-secondary">Submit</button>
+    </form>
+   <h1>Bill Counting</h1>
+    <table id="table" class="table table-primary container ">
+        <tr class="table-primary">
+            <th>Product</th>
+            <th>Quentity</th>
+            <th>Price</th>
+            <th>Total</th>
+        </tr>
+    </table>
+    <script>
+        document.getElementById("form").addEventListener("submit",(event)=>{
+            event.preventDefault();
+                let pro1 = document.getElementById("pro").value;
+                let quen1 = document.getElementById("quen").value;
+                let pri1 =document.getElementById("pri").value;
+                let total=quen1*pri1;
+                let table=document.getElementById("table");
+                let row=document.createElement("tr");
+                let c1=document.createElement("td");
+                let c2=document.createElement("td");
+                let c3=document.createElement("td");
+                let c4=document.createElement("td");
+                c1.textContent=pro1;
+                c2.textContent=quen1;
+                c3.textContent=pri1;
+                c4.textContent=total;
+                
+                row.appendChild(c1)
+                row.appendChild(c2)
+                row.appendChild(c3)
+                row.appendChild(c4)
+
+                table.appendChild(row)
+                document.getElementById("form").reset();
+        })
+    </script>
+</body>
+</html>

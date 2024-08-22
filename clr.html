@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #box{
+         border: 2px solid black;
+         width: 50%;
+         height: 200px;
+        }
+    </style>
+</head>
+<body>
+    <div id="box" >
+
+    </div>
+    <button onclick="clr()">change</button>
+    <script>
+        let a= document.getElementById("box");
+        let b=0;
+        function clr(){
+            if(b==0){
+                a.style.backgroundColor ="red"
+                b++;
+            }else{
+                a.style.backgroundColor ="black"
+                b--;
+            }
+            console.log(b)
+        }
+    </script>
+</body>
+</html>

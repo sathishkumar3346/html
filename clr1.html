@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #box{
+         border: 2px solid black;
+         width: 50%;
+         height: 200px;
+        }
+    </style>
+</head>
+<body>
+    <div id="box" >
+
+    </div>
+    <button onclick="clr()">change</button>
+    <script>
+        let a= document.getElementById("box");
+        const arr=["red","green","black","orange"];
+        let color=0;
+       
+        function clr(){
+          
+            if(color==0){
+                a.style.backgroundColor =arr[color]
+                color++;
+            }else if(color==1){
+                a.style.backgroundColor =arr[color]
+                color++;
+            }else if(color==2){
+                a.style.backgroundColor =arr[color]
+                color++;
+            }else if(color==3){
+                a.style.backgroundColor =arr[color]
+                color--;
+            }
+         
+         
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let a=prompt("enter a gender")
+        let b=prompt("enter a age")
+        let c=prompt("enter a level")
+        if(a=="m"){
+            if(b<=18 && b>=12){
+               if(c<=16.0 && c>=13.0){
+                console.log("normal")
+               } else{
+                console.log("ubnormal")
+               }
+            }
+               else if(b>18){
+                if(c<=17.7 && c>=13.6){
+                    console.log("normal")
+                }else{
+                    console.log("ubnormal")
+                }
+            }
+        }
+        else if(a=="f"){
+            if(b<=18 && b>=12){
+               if(c<=16.0 && c>=12.0){
+                console.log("normal")
+               } else{
+                console.log("ubnormal")
+               }
+            }
+               else if(b>18){
+                if(c<=15.1 && c>=12.1){
+                    console.log("normal")
+                }else{
+                    console.log("ubnormal")
+                }
+            }
+        }
+        
+    </script>
+</body>
+</html>

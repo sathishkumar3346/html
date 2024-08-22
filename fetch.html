@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <style>
+        h1 {
+            text-align: center;
+        }
+
+        table,
+        th,
+        td {
+            border: 1px solid black;
+            border-collapse: collapse;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="row" id="row">
+
+    </div>
+
+    <script>
+
+        fetch('https://fakestoreapi.com/products')
+            .then(response => response.json())
+            .then(json => {
+                console.log(json)
+                let aa = document.getElementById("aa");
+                for (let i of json) {
+                    let cart = `   <div class="container col-4">
+                                    <div class="card" style="width:400px" id="a2">
+                                        <img class="card-img-top" src="${i.image}" alt="Card image" style="width:100%">
+                                        <!-- <div class="card-body" > -->
+                                        <h4 class="card-title" >${i.title}</h4>
+                                        <p class="card-text" >${i.id}</p>
+                                        <p>${i.description}</p>
+                                        <p >${i.price}</p>
+                                        </div>
+                                    </div>
+                                </div>`;
+
+                document.getElementById("row").innerHTML+=cart; 
+
+                }
+            })
+    </script>
+</body>
+
+</html>
